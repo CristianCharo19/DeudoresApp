@@ -35,10 +35,8 @@ class UpdateFragment : Fragment() {
 
         var idDebtor = 0
         binding.updateButton.setOnClickListener {
-
             val debtorDao: DebtorDao = DeudoresApp.database.DebtorDao()
             val name = binding.nameEditText.text.toString()
-
             if (isSearching){   //buscando
                 val debtor: Debtor = debtorDao.readDebtor(name)
                 if (debtor != null){
@@ -65,8 +63,6 @@ class UpdateFragment : Fragment() {
                 Toast.makeText(requireContext(), "Deudor Actualizado", Toast.LENGTH_SHORT).show()
             }
         }
-
-
         return root
     }
 
@@ -81,7 +77,5 @@ class UpdateFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(UpdateViewModel::class.java)
-        // TODO: Use the ViewModel
     }
-
 }
