@@ -35,8 +35,10 @@ class UpdateFragment : Fragment() {
 
         var idDebtor = 0
         binding.updateButton.setOnClickListener {
+
             val debtorDao: DebtorDao = DeudoresApp.database.DebtorDao()
             val name = binding.nameEditText.text.toString()
+            
             if (isSearching){   //buscando
                 val debtor: Debtor = debtorDao.readDebtor(name)
                 if (debtor != null){
