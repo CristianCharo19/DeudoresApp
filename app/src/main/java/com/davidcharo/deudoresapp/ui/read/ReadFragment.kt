@@ -40,7 +40,7 @@ class ReadFragment : Fragment() {
  //           textView.text = it
         })
 
-        binding.updateButton.setOnClickListener {
+        binding.readButton.setOnClickListener {
             readDebtors(binding.nameEditText.text.toString())
         }
 

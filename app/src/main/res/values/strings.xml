@@ -17,4 +17,8 @@
     <string name="amount_value">Valor de la deuda: $%s</string>
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="register_new_account">Registrar una nueva cuenta</string>
 </resources>
