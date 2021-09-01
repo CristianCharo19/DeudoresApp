@@ -48,7 +48,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun createUser(name: String, email: String, password: String, repPassword: String) {
         val user = User(id = NULL, name = name, email = email, password = password, repPassword = repPassword)
-        val userDao : UserDao = UsersApp.databaseUser.UserDao()
+        val userDao : UserDao = DeudoresApp.databaseUser.UserDao()
         userDao.createUser(user)
         saveUser()
         //cleanViews()
@@ -65,9 +65,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun saveUser() {
         val intent = Intent(this, LoginActivity::class.java)
-        //intent.putExtra("email", email)
-        //intent.putExtra("password", password)
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
         finish()
     }

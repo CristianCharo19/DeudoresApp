@@ -13,6 +13,6 @@ interface UserDao {
     @Insert
     fun createUser(user: User)
 
-    @Query("SELECT * FROM table_user WHERE name LIKE :name")
-    fun readUser(name: String) : User
+    @Query("SELECT * FROM table_user WHERE email LIKE :email")
+    fun readUser(email: String) : User
 }

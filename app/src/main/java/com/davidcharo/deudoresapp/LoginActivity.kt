@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         bindOnChangeListeners()
 
         loginBainding.loginButton.setOnClickListener {
-            val userDao: UserDao = UsersApp.databaseUser.UserDao()
+            val userDao: UserDao = DeudoresApp.databaseUser.UserDao()
             val name = loginBainding.emailEditText.text.toString()
             val user: User = userDao.readUser(name)
             if (user != null) {
@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
                     val emailLog = loginBainding.emailEditText.text.toString()
                     val passwordLog = loginBainding.passwordEditText.text.toString()
                     if (emailLog == user.email && passwordLog == user.password) {
-                        //goToMainActivity()
+                        goToMainActivity()
                         cleanViews()
                         loginBainding.passwordTextInputLayout.error = null
                     } else {
@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun goToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
         finish()
     }
