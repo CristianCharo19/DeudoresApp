@@ -21,4 +21,14 @@
     <string name="password">Contraseña</string>
     <string name="login">Iniciar sesión</string>
     <string name="register_new_account">Registrar una nueva cuenta</string>
+    <string name="required_text">Campo requerido</string>
+    <string name="register">Registrar</string>
+    <string name="unwanted_mail">Ingrese un correo electrónico como\nejemplo@gmail.com</string>
+    <string name="name">Nombre</string>
+    <string name="repeat_password">Repita la contraseña</string>
+    <string name="least_password">La contraseña debe tener minimo de 6 caracteres</string>
+    <string name="mail_match">Los correos no coinciden</string>
+    <string name="password_match">Las contraseñas no coinciden</string>
+    <string name="form_error">Debe digitar los campos requeridos</string>
+    <string name="password_error">Las contraseñas no son iguales</string>
 </resources>
