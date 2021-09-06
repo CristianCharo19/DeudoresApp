@@ -1,8 +1,11 @@
 package com.davidcharo.deudoresapp.data.server
 
+import java.io.Serializable
+
 class DebtorServer (
     val id: String? = null,
     val name: String? = null,
     val amount: Long? = null,
-    val phone: String? = null
+    val phone: String? = null,
+    val urlPicture: String? = null
         )

@@ -57,19 +57,13 @@ class DeleteFragment : Fragment() {
                     debtorExist = true
                     debtor.id?.let {
                         db.collection("deudores").document(it).delete().addOnSuccessListener {
-                            Toast.makeText(
-                                requireContext(),
-                                "Deudor eliminado exitosamente",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    }
+                            Toast.makeText(requireContext(), "Deudor eliminado exitosamente", Toast.LENGTH_SHORT).show()
+                        } }
                 }
             }
             if (!debtorExist)
                 Toast.makeText(requireContext(), "Deudor no existe", Toast.LENGTH_SHORT).show()
         }
-
     }
 
 
@@ -82,7 +76,7 @@ class DeleteFragment : Fragment() {
                     val builder = AlertDialog.Builder(it)
                     builder.apply {
                         setTitle(R.string.title_delete)
-                        setMessage("Desea eliminar a " + debtor.name + ", su deuda es: " + debtor.amount.toString() + "?")
+                        setMessage("Desea eli minar a " + debtor.name + ", su deuda es: " + debtor.amount.toString() + "?")
                         setPositiveButton(R.string.accept) { dialog, id ->
                             debtorDao.deleteDebtor(debtor)
                             Toast.makeText(requireContext(), "Deudor Eliminado", Toast.LENGTH_SHORT)
@@ -102,7 +96,6 @@ class DeleteFragment : Fragment() {
         override fun onActivityCreated(savedInstanceState: Bundle?) {
             super.onActivityCreated(savedInstanceState)
             viewModel = ViewModelProvider(this).get(DeleteViewModel::class.java)
-            // TODO: Use the ViewModel
         }
     }
 

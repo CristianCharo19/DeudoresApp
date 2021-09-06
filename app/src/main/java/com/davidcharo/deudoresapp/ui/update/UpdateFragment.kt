@@ -50,7 +50,7 @@ class UpdateFragment : Fragment() {
                 db.collection("deudores").get().addOnSuccessListener { result ->
                     var debtorExist = false
                     for (document in result) {
-                        val debtor: DebtorServer = document.toObject<DebtorServer>()
+                        val debtor = document.toObject<DebtorServer>()
                         if (debtor.name == name) {
                             idDebtor = debtor.id
                             debtorExist = true
@@ -74,9 +74,16 @@ class UpdateFragment : Fragment() {
                 documentUpdate["phone"] = binding.phoneEditText.text.toString()
 
                 val db = Firebase.firestore
-                idDebtor?.let { id -> db.collection("deudores").document(id).update(documentUpdate).addOnSuccessListener {
-                            Toast.makeText(requireContext(), "Deudor actualizado con exito", Toast.LENGTH_SHORT).show()
-                        } }
+                idDebtor?.let { id ->
+                    db.collection("deudores").document(id).update(documentUpdate)
+                        .addOnSuccessListener {
+                            Toast.makeText(
+                                requireContext(),
+                                "Deudor actualizado con exito",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                }
 
                 binding.updateButton.text = getString(R.string.title_read)
                 isSearching = true
@@ -102,8 +109,7 @@ class UpdateFragment : Fragment() {
     private fun searchInLocal(
         debtorDao: DebtorDao,
         name: String,
-        idDebtor: Int
-    ) {
+        idDebtor: Int) {
         var idDebtor1 = idDebtor
         val debtor: Debtor = debtorDao.readDebtor(name)
         if (debtor != null) {

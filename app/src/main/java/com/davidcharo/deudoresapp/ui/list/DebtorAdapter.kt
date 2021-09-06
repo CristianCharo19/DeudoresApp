@@ -8,6 +8,7 @@ import com.davidcharo.deudoresapp.R
 import com.davidcharo.deudoresapp.data.local.entities.Debtor
 import com.davidcharo.deudoresapp.data.server.DebtorServer
 import com.davidcharo.deudoresapp.databinding.CardViewDebtorsItemBinding
+import com.squareup.picasso.Picasso
 
 class DebtorAdapter(
     private val onItemClicked: (DebtorServer) -> Unit,
@@ -42,7 +43,10 @@ class DebtorAdapter(
         fun bind(debtor: DebtorServer){
             with(binding){
                 nameTextView.text = debtor.name
-                amountTextView.text = debtor.amount.toString()
+                amountTextView.setText(debtor.amount.toString())
+                if (debtor.urlPicture != null){
+                    Picasso.get(). load (debtor.urlPicture) .into (pictureImageView);
+                }
             }
 
         }
