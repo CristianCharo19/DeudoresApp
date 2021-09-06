@@ -14,3 +14,4 @@ data class User (
     @ColumnInfo(name = "password") val password: String,
     @ColumnInfo(name = "repPassword") val repPassword: String
 ) : Serializable
+
