@@ -1,4 +1,4 @@
-package com.davidcharo.deudoresapp.data.entities
+package com.davidcharo.deudoresapp.data.local.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

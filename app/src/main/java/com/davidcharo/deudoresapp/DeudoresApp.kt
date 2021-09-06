@@ -2,8 +2,8 @@ package com.davidcharo.deudoresapp
 
 import android.app.Application
 import androidx.room.Room
-import com.davidcharo.deudoresapp.data.DebtorDatabase
-import com.davidcharo.deudoresapp.data.UserDatabase
+import com.davidcharo.deudoresapp.data.local.DebtorDatabase
+import com.davidcharo.deudoresapp.data.local.UserDatabase
 
 class DeudoresApp : Application() {
 

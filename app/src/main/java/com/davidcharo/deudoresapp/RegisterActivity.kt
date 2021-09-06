@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.davidcharo.deudoresapp.data.dao.UserDao
-import com.davidcharo.deudoresapp.data.entities.User
+import com.davidcharo.deudoresapp.data.local.dao.UserDao
+import com.davidcharo.deudoresapp.data.local.entities.User
 import com.davidcharo.deudoresapp.databinding.ActivityRegisterBinding
 import java.sql.Types.NULL
 

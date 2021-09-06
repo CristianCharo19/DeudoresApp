@@ -1,10 +1,9 @@
-package com.davidcharo.deudoresapp.data.dao
+package com.davidcharo.deudoresapp.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.davidcharo.deudoresapp.data.entities.Debtor
-import com.davidcharo.deudoresapp.data.entities.User
+import com.davidcharo.deudoresapp.data.local.entities.User
 
 
 @Dao

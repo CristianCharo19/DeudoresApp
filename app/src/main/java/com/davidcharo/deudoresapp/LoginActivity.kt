@@ -4,12 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.widget.doAfterTextChanged
-import com.davidcharo.deudoresapp.data.dao.DebtorDao
-import com.davidcharo.deudoresapp.data.dao.UserDao
-import com.davidcharo.deudoresapp.data.entities.Debtor
-import com.davidcharo.deudoresapp.data.entities.User
+import com.davidcharo.deudoresapp.data.local.dao.UserDao
+import com.davidcharo.deudoresapp.data.local.entities.User
 import com.davidcharo.deudoresapp.databinding.ActivityLoginBinding
 import com.davidcharo.deudoresapp.utils.MIN_SIZE_PASSWORD
 import com.davidcharo.deudoresapp.utils.validateEmail
@@ -78,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         with(loginBainding){
             emailEditText.doAfterTextChanged {
                 validateEmail()
-                validateFields()
+                //validateFields()
             }
             passwordEditText.doAfterTextChanged {
                 validatePassword()

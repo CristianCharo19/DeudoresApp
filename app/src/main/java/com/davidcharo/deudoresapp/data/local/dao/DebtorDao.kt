@@ -1,7 +1,7 @@
-package com.davidcharo.deudoresapp.data.dao
+package com.davidcharo.deudoresapp.data.local.dao
 
 import androidx.room.*
-import com.davidcharo.deudoresapp.data.entities.Debtor
+import com.davidcharo.deudoresapp.data.local.entities.Debtor
 
 
 @Dao

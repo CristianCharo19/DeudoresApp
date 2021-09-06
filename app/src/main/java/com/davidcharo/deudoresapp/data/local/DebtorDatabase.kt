@@ -1,9 +1,9 @@
-package com.davidcharo.deudoresapp.data
+package com.davidcharo.deudoresapp.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.davidcharo.deudoresapp.data.dao.DebtorDao
-import com.davidcharo.deudoresapp.data.entities.Debtor
+import com.davidcharo.deudoresapp.data.local.dao.DebtorDao
+import com.davidcharo.deudoresapp.data.local.entities.Debtor
 
 @Database(entities = [Debtor::class], version = 1)
 abstract class DebtorDatabase: RoomDatabase() {
